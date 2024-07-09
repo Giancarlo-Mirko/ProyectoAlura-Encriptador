@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="/img/Top.svg" alt="" />
+      </header>
+      <main>
+        <section class="entrada">
+          <textarea
+            class="textoInput"
+            id="miTextarea"
+            rows="6"
+            placeholder="Ingrese el texto aqui"
+            placeholder="Ingrese el texto aquí"
+            oninput="ajustarAltura(this)"
+          ></textarea>
+          <div class="actionsGroup">
+            <span>
+              <img
+                src="/img/bi_exclamation-circle-fill.png"
+                alt="bi_exclamation-circle"
+              />
+              <p class="alert">Solo letras minúsculas y sin acentos</p>
+            </span>
+            <div class="butoncontainer">
+              <button
+                class="butonPrimary"
+                id="encriptarButton"
+                onclick="encriptarTexto()"
+              >
+                Encriptar
+              </button>
+              <button
+                class="butonSecondary"
+                id="desEncriptarButton"
+                onclick="desencriptarTexto()"
+              >
+                Desencriptar
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="salida">
+          <div class="boxOutput">
+            <div class="textOutputContainer">
+              <img src="/img/Muñeco.png" alt="" class="imgOutput" />
+              <p class="p1">Ningún mensaje fue encontrado</p>
+              <p class="p2">
+                Ingresa el texto que desees encriptar o desencriptar.
+              </p>
+            </div>
+            <textarea
+              class="textoOutput"
+              rows="2"
+              placeholder="Texto encriptado"
+              id="outputText"
+              oninput="ajustarAltura(this)"
+              readonly
+            ></textarea>
+            <button
+              class="butonSecondary"
+              id="copiarButton"
+              onclick="copiarTexto()"
+            >
+              Copiar
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
